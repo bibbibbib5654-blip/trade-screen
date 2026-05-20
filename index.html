@@ -4,87 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trade Screen</title>
-
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#0e1621;
-color:white;
-}
-
-.container{
-display:flex;
-height:100vh;
-}
-
-.sidebar{
-width:230px;
-background:#17212b;
-padding:20px;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#2AABEE;
-margin-bottom:25px;
-}
-
-.channel{
-padding:15px;
-margin-bottom:12px;
-background:#1f2c38;
-border-radius:12px;
-cursor:pointer;
-}
-
-.channel:hover{
-background:#2b3b49;
-}
-
-.main{
-flex:1;
-padding:20px;
-}
-
-iframe{
-width:100%;
-height:90vh;
-border:none;
-border-radius:16px;
-}
+body{margin:0;font-family:Arial;background:#0e1621;color:white;display:flex;justify-content:center;align-items:center;height:100vh}
+.panel{background:#17212b;padding:40px;border-radius:20px;width:500px;text-align:center}
+h1{color:#2AABEE;margin-bottom:30px}
+.channel{display:block;padding:18px;margin:15px 0;background:#1f2c38;border-radius:14px;text-decoration:none;color:white;font-size:18px}
+.channel:hover{background:#2b3b49}
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="panel">
+<h1>Trade Screen</h1>
 
-<div class="sidebar">
-<div class="logo">Trade Screen</div>
+<a class="channel" href="https://t.me/m0unt3FX" target="_blank">
+Trade Signals
+</a>
 
-<div class="channel" onclick="loadChannel('m0unt3FX')">
-Signals
-</div>
-
-<div class="channel" onclick="loadChannel('Trader_lCT')">
-Analysis
-</div>
+<a class="channel" href="https://t.me/Trader_lCT" target="_blank">
+Market Analysis
+</a>
 
 </div>
-
-<div class="main">
-<iframe id="feed" src="https://t.me/s/m0unt3FX"></iframe>
-</div>
-
-</div>
-
-<script>
-function loadChannel(channel){
-document.getElementById('feed').src='https://t.me/s/'+channel;
-}
-</script>
 
 </body>
 </html>
